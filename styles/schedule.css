@@ -1,0 +1,42 @@
+.schedule {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.date {
+    height: 40px;
+    background: #1f1f1f;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+}
+
+.icon {
+    width: 20px;
+}
+
+.day {
+    margin-left: 40px;
+    font-size: 14px;
+}
+
+.movie__time {
+    margin: 40px 0;
+    display: flex;
+    max-width: 75%;
+    font-weight: bold;
+    align-items: center;
+}
+
+.format__container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50%;
+}
+
+.format {
+    font-weight: 200;
+    font-size: 12px;
+    margin: 1px 0;
+}

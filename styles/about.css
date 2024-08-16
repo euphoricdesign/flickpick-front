@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.content__about {
+  flex: 1;
+  padding: 20px;
+  align-self: center;
+}
+
+.img__container {
+  flex: 1;
+}
+
+.img__container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.about__h1 {
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.about__p {
+    line-height: 2.6;
+}
