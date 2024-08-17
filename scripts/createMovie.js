@@ -40,7 +40,7 @@ const createMovie = (e) => {
     if (error) return alert(error)
 
     //* Petición al back
-    axios.post('http://localhost:5000/movies', newMovie)
+    axios.post(`${import.meta.env.BACK_URL}/movies`, newMovie)
         .then(res => alert('Created movie!'))
         .catch(err => alert('Error creating movie'))
     

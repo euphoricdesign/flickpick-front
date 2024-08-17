@@ -4,7 +4,7 @@ const axios = require('axios')
 
 const fetchingData = async() => {
     try {
-        const data = await axios.get('http://localhost:5000/movies')
+        const data = await axios.get(`${import.meta.env.BACK_URL}/movies`)
         renderCards(data.data)
     } catch (error) {
        console.log(error)
