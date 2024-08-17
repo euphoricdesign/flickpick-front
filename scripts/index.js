@@ -4,10 +4,11 @@ const axios = require('axios')
 
 const fetchingData = async() => {
     try {
-        const data = await axios.get(`${import.meta.env.BACK_URL}/movies`)
+        const data = await axios.get(`${process.env.VITE_BACK_URL}/movies`)
         renderCards(data.data)
     } catch (error) {
        console.log(error)
+       console.log(process.env.VITE_BACK_URL)
        throw new Error('La petición no tuvo exito')
     }
 }

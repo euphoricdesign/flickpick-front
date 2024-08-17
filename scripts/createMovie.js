@@ -20,6 +20,7 @@ const validateForm = ({title, year, director, duration, genre, rate, poster}) =>
     return null
 }
 
+
 const createMovie = (e) => {
     e.preventDefault()
     
@@ -40,7 +41,7 @@ const createMovie = (e) => {
     if (error) return alert(error)
 
     //* Petición al back
-    axios.post(`${import.meta.env.BACK_URL}/movies`, newMovie)
+    axios.post(`${process.env.VITE_BACK_URL}/movies`, newMovie)
         .then(res => alert('Created movie!'))
         .catch(err => alert('Error creating movie'))
     
