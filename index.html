@@ -7,27 +7,159 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <title>FlickPick</title>
   </head>
   <body>
-    <header class="header">
-      <nav class="navbar">
-          <span><a href="./index.html">FlickPick</a></span>
-          <ul class="sections">
-              <li><a href="./pages/about.html">About</a></li>
-              <li><a href="./pages/schedule.html">Schedule</a></li>
-              <li><a href="./pages/ourCinema.html">Our cinemas</a></li>
-              <li><a href="./pages/movieForm.html">You choose</a></li>
-          </ul>
-      </nav>
-    </header>
-
-    <main id="inicio">
-      <section>
-          <h3 class="category">Latest additions</h3>
-          <div class="card__container"></div>
+    <div id="loader" class="loader">
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+    </div>
+    
+    <div id="content" class="hidden">
+      <header class="header">
+        <nav class="navbar">
+            <span><a href="./index.html">FlickPick</a></span>
+            <ul class="sections">
+                <li><a href="./pages/about.html">About</a></li>
+                <li><a href="./pages/schedule.html">Schedule</a></li>
+                <li><a href="./pages/ourCinema.html">Our cinemas</a></li>
+                <li><a href="./pages/movieForm.html">You choose</a></li>
+            </ul>
+        </nav>
+      </header>
+  
+      <section style="margin-top: 0;" class="cinema-experience">
+        <div class="cinema-overlay">
+          <div class="hero-content">
+            <h1>Your movie adventure starts here</h1>
+            <p class="hero-subtitle">Explore, add your favorites, and help choose what’s playing next.</p>
+            <button class="cta">
+              <a href="./pages/movieForm.html">
+                <span>Start now</span>
+              </a>
+              <svg width="15px" height="10px" viewBox="0 0 13 10">
+                <path d="M1,5 L11,5"></path>
+                <polyline points="8 1 12 5 8 9"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
       </section>
-    </main>
+      
+    
+  
+      <main id="inicio">
+        <section>
+          <h3 class="category">Movies in theaters</h3>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <!-- Las slides se generarán aquí -->
+            </div>
+            <!-- Si quieres tener botones de navegación -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Si quieres tener paginación -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+  
+        <section>
+          <h3 class="category">Top rated movies</h3>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <!-- Las slides se generarán aquí -->
+              <div class="swiper-slide">
+                <div class="movie__card">
+                  <div class="content__card">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_942560-MLA77981459169_072024-O.webp" alt="" loading="lazy">
+                    <span class="shadow"></span>
+                    <div class="content">
+                      <h1>Deadpool & Wolverine</h1>
+                      <p class="date">2024 . Shawn Levy</p>
+                      <b>2h 7min</b>
+                      <div class="hex__tag">
+                        <!-- genre tags -->
+                        <div class="tag">Superhéroes</div>
+                        <div class="tag">Acción</div>
+                        <div class="tag">Sci-Fi</div>
+                        <!-- ... -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="movie__card">
+                  <div class="content__card">
+                    <img src="https://i.ebayimg.com/images/g/IgYAAOSwBr1kXLCG/s-l1600.jpg" alt="" loading="lazy">
+                    <span class="shadow"></span>
+                    <div class="content">
+                      <h1>Logan</h1>
+                      <p class="date">2017 . James Mangold</p>
+                      <b>2h 17min</b>
+                      <div class="hex__tag">
+                        <!-- genre tags -->
+                        <div class="tag">Superhéroes</div>
+                        <div class="tag">Acción</div>
+                        <div class="tag">Drama</div>
+                        <!-- ... -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="movie__card">
+                  <div class="content__card">
+                    <img src="https://i.ebayimg.com/images/g/TAIAAMXQ~6VQ48ie/s-l1600.jpg" alt="" loading="lazy">
+                    <span class="shadow"></span>
+                    <div class="content">
+                      <h1>Mamma Mia</h1>
+                      <p class="date">2024 . Phyllida Lloyd</p>
+                      <b>1h 48min</b>
+                      <div class="hex__tag">
+                        <!-- genre tags -->
+                        <div class="tag">Comedia</div>
+                        <div class="tag">Musical</div>
+                        <div class="tag">Romantica</div>
+                        <!-- ... -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="movie__card">
+                  <div class="content__card">
+                    <img src="https://pics.filmaffinity.com/the_devil_wears_prada-912143633-large.jpg" alt="" loading="lazy">
+                    <span class="shadow"></span>
+                    <div class="content">
+                      <h1>The Devil Wears Prada</h1>
+                      <p class="date">2024 . David Frankel</p>
+                      <b>1h 49min</b>
+                      <div class="hex__tag">
+                        <!-- genre tags -->
+                        <div class="tag">Comedia</div>
+                        <div class="tag">Drama</div>
+                        <!-- ... -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Si quieres tener botones de navegación -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Si quieres tener paginación -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+      </main>
+    </div>
 
     <script src="./public/bundle.js"></script>
   </body>
