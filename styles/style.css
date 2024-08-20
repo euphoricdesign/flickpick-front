@@ -20,7 +20,7 @@ a:hover {
 
 main {
     width: 1350px;
-    margin: 0 auto;
+    margin: 100px auto;
 }
 
 section {
@@ -29,6 +29,10 @@ section {
 
 .header {
     background: #1f1f1f;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top: 0;
 }
 
 .navbar {
@@ -173,8 +177,288 @@ section {
     margin-right: 5px;
 }
   
-  
+/* Estilo para la sección de experiencia cinematográfica */
+.cinema-experience {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Ajusta según lo necesites */
+    background: url('../assets/cinema.jpg') no-repeat center center/cover;
+    background-size: cover;
+    background-attachment: fixed; /* Efecto parallax */
+}
+
+.cinema-experience video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.cinema-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Oscurece la imagen/video para resaltar el texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 3;
+}
+
+.cinema-overlay h1 {
+    color: var(--accent-color);
+    font-size: 48px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    color: white;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ffcc00; /* Color de hover */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .cinema-experience {
+        height: 400px;
+    }
+
+    .cinema-overlay h1 {
+        font-size: 32px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .cta-button {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cinema-experience {
+        height: 300px;
+    }
+
+    .cinema-overlay h1 {
+        font-size: 24px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        padding: 6px 12px;
+    }
+}
+
 
   
+.swiper-wrapper {
+    padding: 20px 0;
+  }
   
+  .swiper-container .swiper-button-prev,
+  .swiper-container .swiper-button-next {
+    top: 50%; /* Centra verticalmente las flechas */
+    transform: translateY(-50%); /* Asegura que estén centradas */
+    width: 44px; /* Ajusta el tamaño de las flechas */
+    height: 44px;
+    color: white; /* Cambia el color de las flechas */
+  }
+
+  .swiper-button-next {
+    right: 10px; /* Ajusta la distancia desde el borde derecho */
+}
+
+.swiper-button-prev {
+    left: 10px; /* Ajusta la distancia desde el borde izquierdo */
+}
   
+  .swiper-container .swiper-button-prev::after,
+  .swiper-container .swiper-button-next::after {
+    font-size: 16px;
+  }
+
+  /* Estilos para el contenedor Swiper */
+.swiper-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Evita el desbordamiento horizontal */
+}
+
+/* Estilos para el wrapper de Swiper */
+.swiper-wrapper {
+    display: flex; /* Flex para asegurar que las slides se alineen correctamente */
+}
+
+/* Estilos para cada slide de Swiper */
+.swiper-slide {
+    box-sizing: border-box; /* Incluye padding y border en el ancho de la slide */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Opcional: Ajusta el tamaño de las slides si es necesario */
+}
+
+/* Estilos para las flechas de navegación */
+.swiper-button-next,
+.swiper-button-prev {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    color: white;
+}
+
+/* Estilos para la paginación */
+.swiper-pagination {
+    bottom: 10px; /* Ajusta la distancia desde la parte inferior del contenedor Swiper */
+    text-align: center; /* Centra los puntos de paginación */
+}
+
+.swiper-pagination-bullet {
+    background: white; /* Cambia el color de los puntos */
+    opacity: 0.7; /* Ajusta la opacidad */
+}
+
+.swiper-pagination-bullet-active {
+    background: blue; /* Cambia el color del punto activo */
+    opacity: 1; /* Asegúrate de que el punto activo sea completamente visible */
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    display: none !important;
+}
+
+/* From Uiverse.io by alexmaracinaru */ 
+.cta {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #ff515a;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+  }
+  
+  .cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: white;
+  }
+  
+  .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: white;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  
+  .cta:hover:before {
+    width: 100%;
+    background: #ff515a;
+  }
+  
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  
+  .cta:active {
+    transform: scale(0.95);
+  }
+  
+
+/* From Uiverse.io by LeonKohli */ 
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.bubble {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-image: linear-gradient(to right, #ff515a, #ff787f);
+  margin: 0 5px;
+  animation: bubbleAnimation 1.5s ease-in-out infinite;
+}
+
+
+.hidden {
+    display: none;
+  }
+  
+
+@keyframes bubbleAnimation {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 0.5;
+  }
+}
+
+
+.alert-success {
+    margin-top: 20px;
+}

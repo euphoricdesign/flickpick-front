@@ -15,4 +15,12 @@ module.exports = {
             silent: true,   // Suprime los mensajes de error
         }),
     ],
+    module: {
+        rules: [
+          {
+            test: /\.css$/,
+            use: ['style-loader', 'css-loader']
+          }
+        ]
+      }
 }
